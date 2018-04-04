@@ -4,6 +4,81 @@ html {
     font-family: 'Oswald, sans-serif';
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-areas: "header"
+                         "main"
+                         "first-screen"
+                         "categories"
+                         "advantages"
+                         "result"
+                         "contacts"
+                         "footer";
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navigation {
+/*    display: flex;*/
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.navigation .navigation__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    border-top: 1px solid #e6e6e6;
+    padding: 25px 0;
+    font-family: "Oswald";
+    font-size: 20px;
+    color: #111111;
+}
+
+.main {
+    grid-area: main;
+}
+
+.first-screen {
+    grid-area: first-screen;
+    background-image:url(../images/jpg/index-background-mobile@1x.jpg);
+    padding: 0 20px;
+}
+
+.first-screen .first-screen__title {
+    color: #ffffff;
+    font-family: Oswald;
+    font-weight: 400;
+    text-align: center;
+}
+
+.categories {
+    grid-area: categories;
+}
+
+.advantages {
+    grid-area: advantages;
+}
+
+.result {
+    grid-area: result;
+}
+
+.contacts {
+    grid-area: contacts;
+}
+
+.footer {
+    grid-area: footer;
+}
+
 
 
 
