@@ -1,7 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:500&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,500&subset=cyrillic');
 
 html {
     font-family: 'Oswald, sans-serif';
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -48,27 +68,195 @@ body {
 
 .first-screen {
     grid-area: first-screen;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     background-image:url(../images/jpg/index-background-mobile@1x.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
     padding: 0 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
 }
 
 .first-screen .first-screen__title {
-    color: #ffffff;
     font-family: Oswald;
     font-weight: 400;
     text-align: center;
+    font-size: 36px;
+    line-height: 1em;
+    margin: 20px 0;
+}
+
+.first-screen .first-screen__tagline {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Oswald;
+    font-size: 14px;
+}
+
+.first-screen .first-screen__image {
+    margin: 25px 0 20px;
+}
+
+.first-screen .first-screen__button {
+    background-color: #68b738;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: Oswald;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 0;
 }
 
 .categories {
     grid-area: categories;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.categories .categories__item {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    margin:0 20px 20px;
+    padding: 20px;
+}
+
+.categories .categories__image {
+    width: 44px;
+    height: 44px;
+    position: relative;
+    z-index: 1;
+}
+
+.categories .categories__image img {
+    width: 44px;
+    height:44px;
+    z-index: 2;
+}
+
+.categories .categories__image::before {
+    position: absolute;
+    display: block;
+    content: "";
+    background-color: #68b738;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.categories .categories__title {
+    text-transform: uppercase;
+    font-family: Oswald;
+    font-size: 24px;
+    font-weight: 400;
+    margin-left: 30px;
+}
+
+.categories .categories__description {
+    font-size: 14px;
+    font-family: Arial;
+    color: #444444;
+    margin: 20px 0;
+    padding-bottom: 20px;
+    line-height: 18px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.categories .categories__link {
+    text-transform: uppercase;
+    font-family: Oswald;
+    color: #111111;
+    position: relative;
+}
+
+.categories .categories__link::after {
+    position: absolute;
+    display: block;
+    content: url(../images/svg/icon-right-arrow-long.svg);
+    height: 10px;
+    width: 25px;
+    top: 0;
+    right: -40px;
 }
 
 .advantages {
     grid-area: advantages;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.advantages .advantages__title {
+    font-size: 36px;
+    font-family: Oswald;
+    font-weight: 400;
+}
+
+.advantages .advantages__list {
+    padding: 20px 0;
+}
+
+.advantages .advantages__item {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 20px 0;
+}
+
+.advantages .advantages__image {
+    background-color: #68b738;
+}
+
+.advantages .advantages__description {
+    margin-left: 20px;
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 18px;
 }
 
 .result {
     grid-area: result;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    padding: 20px;
+    
+}
+
+.result .result__title {
+    font-family: Oswald;
+    font-weight: 400;
+    font-size: 36px;
+    margin-bottom: 20px
+}
+
+.result .result__description {
+    font-size: 14px;
+    font-family: Arial;
+    line-height: 18px;
+    margin-bottom: 20px;
+}
+
+.result .result__statistic {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.result .result__weight {
+    border: 1px solid #cdcdcd;
+    font-size: 24px;
+    font-family: Oswald;
+}
+
+.result .result__period {
+    border: 1px solid #cdcdcd;
+    font-size: 24px;
+    font-family: Oswald;
 }
 
 .contacts {
