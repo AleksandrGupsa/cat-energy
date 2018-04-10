@@ -19,7 +19,7 @@ h1, h2, h3 {
     padding: 0;
 }
 
-p {
+p, spa n {
     padding: 0;
     margin: 0;
 }
@@ -224,7 +224,7 @@ body {
     flex-wrap: wrap;
     background-color: #f2f2f2;
     padding: 20px;
-    
+    box-sizing: border-box;
 }
 
 .result .result__title {
@@ -243,19 +243,72 @@ body {
 
 .result .result__statistic {
     display: flex;
-    flex-wrap: nowrap;
+    width: 100%;
     justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
-.result .result__weight {
+.result .result__block {
+    width: 124px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #cdcdcd;
     font-size: 24px;
+    line-height: 24px;
+    font-family: Oswald;
+    border-radius: 5px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.result .result__block::before {
+    width: 90px;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+/*    position: absolute;*/
+    font-size: 12px;
+    line-height: 12px;
+    font-family: Arial;
+    text-transform: lowercase;
+    bottom: -30%;
+    left: 0;
+    right: 0;
+    background: #f2f2f2;
+}
+
+.result .result__block.result__block--weight::before {
+    display: block;
+    position: absolute;
+    content: "Снижение веса";
+}
+
+.result .result__block.result__block--period::before {
+    display: block;
+    position: absolute;
+    content: "Затрачено времени";
+}
+ 
+.result .result__food-costs {
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    text-align : center;
+    text-transform: uppercase;
+    font-size: 14px;
     font-family: Oswald;
 }
 
-.result .result__period {
-    border: 1px solid #cdcdcd;
-    font-size: 24px;
+.result .result__image {
+    margin: 30px 0;
+}
+
+.result .result__progress {
+    display: flex;
+    font-size: 16px;
     font-family: Oswald;
 }
 
