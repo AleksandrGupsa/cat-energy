@@ -45,8 +45,36 @@ body {
     flex-wrap: wrap;
 }
 
+.header .header__bar {
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .header__link {
+    display: block;
+}
+
+.header .header__logo.header__logo--maskot {
+    width: 35px;
+}
+
+.header .header__logo.header__logo--name {
+    width: 110px;
+}
+
+.header .header__btn {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/svg/icon-close.svg);
+    background-color: transparent;
+    border: none;
+}
+ 
 .navigation {
-/*    display: flex;*/
+    display: flex;
     flex-direction: column;
     width: 100%;
     text-align: center;
@@ -56,7 +84,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     border-top: 1px solid #e6e6e6;
-    padding: 25px 0;
+    padding: 18px 0;
     font-family: "Oswald";
     font-size: 20px;
     color: #111111;
@@ -85,7 +113,7 @@ body {
     text-align: center;
     font-size: 36px;
     line-height: 1em;
-    margin: 20px 0;
+    margin: 25px 0;
 }
 
 .first-screen .first-screen__tagline {
@@ -96,7 +124,7 @@ body {
 }
 
 .first-screen .first-screen__image {
-    margin: 25px 0 20px;
+    margin: 25px 0 0;
 }
 
 .first-screen .first-screen__button {
@@ -119,20 +147,25 @@ body {
     display: flex;
     flex-wrap: wrap;
     background-color: #f2f2f2;
-    margin:0 20px 20px;
-    padding: 20px;
+    margin: 0 20px 20px;
+    padding: 25px 20px 15px;
+}
+
+.categories .categories__item-head {
+    display: flex;
+    align-items: center;
 }
 
 .categories .categories__image {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 53px;
     position: relative;
     z-index: 1;
 }
 
 .categories .categories__image img {
-    width: 44px;
-    height:44px;
+    width: 50px;
+    height: 50px;
     z-index: 2;
 }
 
@@ -154,7 +187,7 @@ body {
     font-family: Oswald;
     font-size: 24px;
     font-weight: 400;
-    margin-left: 30px;
+    margin-left: 25px;
 }
 
 .categories .categories__description {
@@ -198,17 +231,27 @@ body {
 }
 
 .advantages .advantages__list {
-    padding: 20px 0;
+    padding: 30px 0 20px;
 }
 
 .advantages .advantages__item {
     display: flex;
     flex-wrap: nowrap;
-    margin: 20px 0;
+    margin: 0 0 20px;
+}
+
+.advantages .advantages__image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #68b738;
+    width: 60px !important;
+    height: 60px;
 }
 
 .advantages .advantages__image {
-    background-color: #68b738;
+    width: 50px;
+    height: 50px;
 }
 
 .advantages .advantages__description {
@@ -223,7 +266,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     background-color: #f2f2f2;
-    padding: 20px;
+    padding: 20px 20px 27px;
     box-sizing: border-box;
 }
 
@@ -231,7 +274,7 @@ body {
     font-family: Oswald;
     font-weight: 400;
     font-size: 36px;
-    margin-bottom: 20px
+    margin-bottom: 30px;
 }
 
 .result .result__description {
@@ -295,7 +338,7 @@ body {
 .result .result__food-costs {
     display: block;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 35px;
     text-align : center;
     text-transform: uppercase;
     font-size: 14px;
@@ -358,7 +401,7 @@ body {
     line-height: 20px;
     text-transform: uppercase;
     font-weight: 400;
-    padding: 20px 0;
+    padding: 28px 0;
 }
 
 .contacts .contacts__address {
@@ -369,12 +412,13 @@ body {
     font-size: 14px;
     line-height: 20px;
     color: #444444;
-    padding: 20px 0;
+    padding: 28px 0;
 }
 
 .contacts .contacts__map {
     display: flex;
-    margin: 0 -20px 20px;
+    height: 360px;
+    margin: 0 -20px 25px;
     position: relative;
 }
 
@@ -384,10 +428,10 @@ body {
     background-image: url(/images/png/map-pin.png);
     background-size: cover;
     content: "";
-    width: 60px;
-    height: 60px;
-    top: 42%;
-    left: 38%;
+    width: 50px;
+    height: 53px;
+    top: 39%;
+    left: 40%;
 }
 
 .contacts .contacts__image {
@@ -418,19 +462,45 @@ body {
     width: 100%;
     border-top: 1px solid #d9d9d9;
     border-bottom: 1px solid #d9d9d9;
-    padding: 20px 0;
+    padding: 20px 80px;
+    justify-content: space-between;
+}
+
+.social .social__icon-link {
+    display: block;
+    width: 20px;
 }
 
 .social .social__icon {
     display: block;
+    color: #666666; 
 }
 
-.social .social__icon .social__icon--vk {
+.social .social__icon.social__icon--vk {
+    width: 25px;
+    height: 20px;
+}
+
+.social .social__icon.social__icon--ig {
     width: 20px;
     height: 20px;
 }
 
+.social .social__icon.social__icon--fb {
+    width: 20px;
+    height: 20px;
+}
 
+.made-by {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
 
-
-
+.made-by .made-by__name {
+    font-size: 16px;
+    font-family: Arial;
+    color: #444444;
+}
