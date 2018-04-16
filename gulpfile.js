@@ -1,8 +1,7 @@
-let gulp = require('gulp'),
-    uglify = require('gulp-uglify');
+'use strict';
 
-gulp.task('minify', function() {
-    gulp.src('scripts/script.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('build'))
+const gulp = require('gulp');
+
+gulp.task('hello', function(){
+    console.log('Hello');
 });
